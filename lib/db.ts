@@ -27,4 +27,17 @@ export async function createDBLead() {
     )
   `;
 }
+export async function createDBUser() {
+  // Then create the table
+  await sql`
+    CREATE TABLE IF NOT EXISTS "User" (
+      id SERIAL PRIMARY KEY,
+      email TEXT NOT NULL UNIQUE,
+      name TEXT NOT NULL,
+      password TEXT NOT NULL,
+      role "RoleType" NOT NULL DEFAULT 'EMPLOYEE',
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+  `;
+}
 export { sql };
