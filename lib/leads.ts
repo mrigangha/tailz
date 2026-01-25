@@ -78,3 +78,9 @@ export async function setCompleted(id: number): Promise<void> {
     WHERE id = ${id}
   `;
 }
+export async function DeleteLead(id: number): Promise<void> {
+  await sql`
+    DELETE FROM "Lead"
+    WHERE id = ${id}
+  `;
+}
