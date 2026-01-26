@@ -18,6 +18,7 @@ export interface LeadData {
 export interface Lead extends LeadData {
   id: number;
   created_at: Date;
+  completed?: boolean;
 }
 
 /**
@@ -28,11 +29,12 @@ export interface Lead extends LeadData {
  */
 export async function addLead(leadData: LeadData): Promise<Lead> {
   const { email, name, phone, service } = leadData;
-  const result = await sql<Lead>`
+  const result = await sql`
       INSERT INTO "Lead" (email, name, phone, service)
       VALUES (${email}, ${name}, ${phone}, ${service})
       RETURNING *
     `;
+  return result[0] as Lead;
 }
 
 /**
@@ -49,7 +51,7 @@ export async function addLeads(leads: LeadData[]): Promise<Lead[]> {
       const result = await addLead(lead);
       results.push(result);
     } catch (error: any) {
-      errors.push({ lead, error: error.message });
+      errors.push({ lead, error: error.message || "Unknown error" });
     }
   }
 
@@ -68,9 +70,13 @@ export async function getLeadsByTime(): Promise<Lead[]> {
   const results = await sql`
      SELECT * FROM "Lead" ORDER BY created_at DESC
    `;
-  return results || [];
+  return (results as Lead[]) || [];
 }
 
+/**
+ * Mark a lead as completed
+ * @param id - The lead ID to update
+ */
 export async function setCompleted(id: number): Promise<void> {
   await sql`
     UPDATE "Lead"
@@ -78,6 +84,11 @@ export async function setCompleted(id: number): Promise<void> {
     WHERE id = ${id}
   `;
 }
+
+/**
+ * Delete a lead from the database
+ * @param id - The lead ID to delete
+ */
 export async function DeleteLead(id: number): Promise<void> {
   await sql`
     DELETE FROM "Lead"

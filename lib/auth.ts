@@ -52,7 +52,7 @@ export async function createUser(
       success: true,
       user: result,
     };
-  } catch (error) {
+  } catch (error: any) {
     // Handle unique constraint violation (duplicate email)
     if (error.code === "23505") {
       return {
@@ -63,13 +63,13 @@ export async function createUser(
 
     return {
       success: false,
-      error: error.message,
+      error: error.message || "An error occurred",
     };
   }
 }
 
 // Get user by email
-export async function getUserByEmail(email) {
+export async function getUserByEmail(email: string) {
   try {
     const result = await sql`
       SELECT id, email, name, role, created_at
@@ -88,14 +88,15 @@ export async function getUserByEmail(email) {
       success: true,
       user: result,
     };
-  } catch (error) {
+  } catch (error: any) {
     return {
       success: false,
-      error: error.message,
+      error: error.message || "An error occurred",
     };
   }
 }
-export async function getUserById(id) {
+
+export async function getUserById(id: number) {
   try {
     const result = await sql`
       SELECT id, email, name, role, created_at
@@ -115,14 +116,15 @@ export async function getUserById(id) {
       success: true,
       user: result,
     };
-  } catch (error) {
+  } catch (error: any) {
     return {
       success: false,
-      error: error.message,
+      error: error.message || "An error occurred",
     };
   }
 }
-export async function login(email, password) {
+
+export async function login(email: string, password: string) {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -155,10 +157,10 @@ export async function login(email, password) {
       success: false,
       error: "Invalid password",
     };
-  } catch (error) {
+  } catch (error: any) {
     return {
       success: false,
-      error: error.message,
+      error: error.message || "An error occurred",
     };
   }
 }
@@ -184,6 +186,7 @@ export async function getLeads(token: string) {
   const leads = await getLeadsByTime();
   return { success: true, leads };
 }
+
 export async function deleteLead(token: string, id: number) {
   const user = await getCurrentUser(token);
   if (user.success == false) {
