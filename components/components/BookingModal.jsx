@@ -147,8 +147,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                 required
                 disabled={isSubmitting}
               >
-                <option value="FUNCTIONSERVICE">Function Service</option>
-                <option value="BOARDING">Pet Boarding</option>
+                <option value="FUNCTIONSERVICE">Event Planning</option>
                 <option value="WALKING">Pet Walking</option>
                 <option value="DAYCARE">Day Care</option>
                 <option value="PETSITTING">Pet Sitting</option>

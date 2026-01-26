@@ -36,7 +36,7 @@ export default function Navbar({ scrolled, activeSection, onOpenBooking }) {
             <span className="text-white font-bold text-xl">PP</span>
           </motion.div>
           <span className="text-2xl font-black tracking-tighter text-gray-900">
-            Pet<span className="text-sky-600">Puller</span>
+            Pets<span className="text-sky-600">Puller</span>
           </span>
         </div>
 

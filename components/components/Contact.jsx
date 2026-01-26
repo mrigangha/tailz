@@ -1,5 +1,5 @@
 import React from "react";
-import { Clock, Camera, ShieldCheck, Heart } from "lucide-react";
+import { Clock, Camera, ShieldCheck, Heart, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
@@ -63,46 +63,38 @@ const Contact = () => {
                     <h4 className="text-xl font-bold mb-2 group-hover:text-sky-400 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400 leading-relaxed">
-                      {item.text}
-                    </p>
+                    <p className="text-gray-400 leading-relaxed">{item.text}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* Simple Contact Form / Call to Action */}
+          {/* Contact Call to Action */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-12 text-gray-900 shadow-2xl relative overflow-hidden text-center cursor-auto"
+            className="bg-white/95 backdrop-blur-md rounded-[2.5rem] p-8 md:p-12 text-gray-900 shadow-2xl relative overflow-hidden text-center"
           >
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-sky-400 to-blue-500"></div>
             <h3 className="text-3xl font-bold mb-4">Have Questions?</h3>
             <p className="text-gray-600 mb-8">
-              Not ready to book yet? Send us a quick message and we'll answer all
-              your queries.
+              Ready to give your pet the best care? Call us now and we'll answer
+              all your queries.
             </p>
-            <div className="flex flex-col space-y-4">
-              <input
-                type="email"
-                placeholder="Your Email Address"
-                className="w-full px-5 py-4 rounded-xl bg-sky-50 border border-sky-100 focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 outline-none transition-all cursor-text"
-              />
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-sky-600 transition-all cursor-pointer"
-              >
-                Contact Us
-              </motion.button>
-            </div>
+            <motion.a
+              href="tel:+917858044746"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center justify-center w-full bg-gray-900 text-white py-5 px-6 rounded-xl font-bold hover:bg-sky-600 transition-all cursor-pointer space-x-3"
+            >
+              <Phone className="w-5 h-5" />
+              <span>+91 7858044746</span>
+            </motion.a>
             <p className="mt-6 text-sm text-gray-400">
-              Or call us directly at{" "}
-              <span className="font-bold text-sky-600">+91 7858044746</span>
+              Available 24/7 for your pet care needs
             </p>
           </motion.div>
         </div>

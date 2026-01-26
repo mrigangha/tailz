@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Instagram,
-  Facebook,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -45,24 +39,12 @@ const Footer = () => {
               Providing modern pet care solutions across India. Safe,
               transparent, and loving environment for your furry friends.
             </p>
-            <div className="flex space-x-4">
-              {[Instagram, Facebook, Mail].map((Icon, i) => (
-                <motion.a
-                  key={i}
-                  whileHover={{ y: -5, backgroundColor: "#0284c7" }}
-                  href="#"
-                  className="p-3 bg-white shadow-md rounded-xl text-sky-600 hover:text-white transition-all duration-300 cursor-pointer"
-                >
-                  <Icon size={20} />
-                </motion.a>
-              ))}
-            </div>
           </div>
 
           <div>
             <h4 className="text-lg font-bold mb-6 text-gray-900">Services</h4>
             <ul className="space-y-4 text-gray-600">
-              {["Boarding", "Grooming", "Training", "Pet Sitter"].map(
+              {["Event Planning", "Pet Walking", "Pet Sitter", "Day Care"].map(
                 (item) => (
                   <li key={item}>
                     <a
@@ -73,7 +55,7 @@ const Footer = () => {
                       {item}
                     </a>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
@@ -92,7 +74,7 @@ const Footer = () => {
                       {item}
                     </a>
                   </li>
-                )
+                ),
               )}
             </ul>
           </div>
@@ -106,9 +88,9 @@ const Footer = () => {
                   className="text-sky-600 mt-1 group-hover:animate-bounce"
                 />
                 <span className="group-hover:text-sky-500 transition-colors font-medium">
-                  123 Pet Street, Bandra West,
+                  Hebbal,
                   <br />
-                  Mumbai, India 400050
+                  Bangalore, India 560024
                 </span>
               </li>
               <li className="flex items-center space-x-3 group">

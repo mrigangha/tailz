@@ -1,36 +1,36 @@
 import React from "react";
-import { Heart, Star, ShieldCheck, ChevronRight } from "lucide-react";
+import { Calendar, Footprints, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
 
 const Services = () => {
   const services = [
     {
-      title: "Pet Boarding",
+      title: "Event Pet Chaperone",
       description:
-        "A home away from home with 24/7 supervision and plenty of playtime in our spacious facility.",
-      icon: <Heart className="w-8 h-8 text-white" />,
+        "Planning a wedding or special event? We manage your dog during the festivities, ensuring they are part of your big day safely without the stress.",
+      icon: <Calendar className="w-8 h-8 text-white" />,
       image:
-        "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=600",
+        "https://images.unsplash.com/photo-1519052537078-e6302a4968ef?auto=format&fit=crop&q=80&w=600",
+      color: "bg-pink-500",
+    },
+    {
+      title: "Walking & Day Care",
+      description:
+        "Reliable dog walking, drop-in pet sitting, and day care services to keep your furry friend happy, active, and socialized while you are busy.",
+      icon: <Footprints className="w-8 h-8 text-white" />,
+      image:
+        "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=600",
       color: "bg-sky-500",
     },
     {
-      title: "Pet Grooming",
+      title: "Special Needs Care",
       description:
-        "Professional styling and hygiene treatments to keep your pet looking and feeling their absolute best.",
-      icon: <Star className="w-8 h-8 text-white" />,
+        "Experienced care for senior dogs and specific medical needs, including Arthritis, Epilepsy, and mobility support. Your pet is safe in knowledgeable hands.",
+      icon: <Activity className="w-8 h-8 text-white" />,
       image:
-        "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&q=80&w=600",
-      color: "bg-indigo-500",
-    },
-    {
-      title: "Dog Training",
-      description:
-        "Expert-led sessions focusing on positive reinforcement to build a strong bond with your pet.",
-      icon: <ShieldCheck className="w-8 h-8 text-white" />,
-      image:
-        "https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&q=80&w=600",
-      color: "bg-teal-500",
+        "https://images.unsplash.com/photo-1535930749574-1399327ce78f?auto=format&fit=crop&q=80&w=600",
+      color: "bg-emerald-500",
     },
   ];
 
@@ -52,11 +52,11 @@ const Services = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16 px-4">
           <h2 className="text-4xl font-black mb-4 text-gray-900">
-            Our Premium Services
+            Professional Pet Services
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
-            Everything your pet needs to stay happy, healthy, and safe. Tailored
-            care for every breed.
+            From special events to specialized medical care, we provide the
+            attention and expertise your best friend deserves.
           </p>
         </div>
         <motion.div
@@ -86,12 +86,9 @@ const Services = () => {
                   <h3 className="text-2xl font-bold mb-3 text-gray-900 group-hover:text-sky-500 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     {service.description}
                   </p>
-                  <span className="inline-flex items-center text-sky-600 font-bold hover:gap-3 transition-all duration-300">
-                    Learn More <ChevronRight className="w-5 h-5 ml-1" />
-                  </span>
                 </div>
               </TiltCard>
             </motion.div>

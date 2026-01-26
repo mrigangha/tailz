@@ -1,7 +1,5 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
-import CustomCursor from "../components/components/CustomCursor";
 import Navbar from "../components/components/Navbar";
 import Hero from "../components/components/Hero";
 import Stats from "../components/components/Stats";
@@ -45,12 +43,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-sky-50 font-sans text-gray-900 selection:bg-sky-100 selection:text-sky-600 overflow-x-hidden cursor-none">
-      <CustomCursor />
+    <div className="min-h-screen bg-sky-50 font-sans text-gray-900 selection:bg-sky-100 selection:text-sky-600 overflow-x-hidden">
       <BookingModal
         isOpen={isBookingModalOpen}
         onClose={() => setIsBookingModalOpen(false)}
       />
+
       <Navbar
         scrolled={scrolled}
         activeSection={activeSection}
