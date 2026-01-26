@@ -84,7 +84,6 @@ export default function LoginPage({ setToken, setLoginError }) {
               const formData = new FormData(event.currentTarget);
               const email = formData.get("email");
               const password = formData.get("password");
-              console.log(email, password);
 
               const val = await login(email, password);
 
@@ -95,9 +94,6 @@ export default function LoginPage({ setToken, setLoginError }) {
               }
 
               const payload = await getCurrentUser(val.token);
-
-              // Save token to localStorage
-              localStorage.setItem("access_token", val.token);
 
               setToken(val.token);
             } catch (err) {
