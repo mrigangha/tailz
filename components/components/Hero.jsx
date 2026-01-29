@@ -76,8 +76,8 @@ const Hero = ({ onOpenBooking }) => {
             variants={fadeInUp}
             className="text-xl text-gray-600 mb-10 max-w-lg leading-relaxed"
           >
-            Premium pet boarding, grooming, and training services. We provide a
-            safe, loving environment for your pets while you're away.
+            Premium pet services. We provide a safe, loving environment for your
+            pets while you're away.
           </motion.p>
 
           <motion.div

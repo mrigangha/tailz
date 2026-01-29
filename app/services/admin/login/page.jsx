@@ -86,7 +86,6 @@ export default function Page() {
 
   // Logout handler
   const handleLogout = () => {
-    localStorage.removeItem("access_token");
     setToken(null);
     setLeads([]);
   };
