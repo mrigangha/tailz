@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+Tailz readme · MD
+Copy
 
-First, run the development server:
+# 🐾 Tailz - Premium Dog Boarding & Pet Care Platform
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A modern, full-featured website for Tailz, your trusted partner in dog boarding, daycare, grooming, and pet care services. Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/Next.js-14-black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.0-38bdf8)
+![License](https://img.shields.io/badge/license-MIT-green)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌟 Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Core Services
+- **🏠 Dog Boarding** - Safe, comfortable overnight stays for your furry friends
+- **🎾 Doggy Daycare** - Daily playtime and socialization programs
+- **✂️ Professional Grooming** - Expert grooming services including baths, haircuts, and nail trimming
+- **🚶 Dog Walking** - Scheduled walks with trained professionals
+- **📸 Live Updates** - Real-time photos and videos of your pet during their stay
+- **🏥 Veterinary Coordination** - Emergency vet care and medication administration
