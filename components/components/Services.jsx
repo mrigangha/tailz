@@ -11,7 +11,7 @@ const Services = () => {
         "Planning a wedding or special event? We manage your dog during the festivities, ensuring they are part of your big day safely without the stress.",
       icon: <Calendar className="w-8 h-8 text-white" />,
       image:
-        "https://images.unsplash.com/photo-1519052537078-e6302a4968ef?auto=format&fit=crop&q=80&w=600",
+        "https://res.cloudinary.com/dzc1x0y1h/image/upload/v1771946116/WhatsApp_Image_2026-02-24_at_8.31.45_PM_prdyh5.jpg",
       color: "bg-pink-500",
     },
     {
@@ -20,7 +20,7 @@ const Services = () => {
         "Reliable dog walking, drop-in pet sitting, and day care services to keep your furry friend happy, active, and socialized while you are busy.",
       icon: <Footprints className="w-8 h-8 text-white" />,
       image:
-        "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=600",
+        "https://res.cloudinary.com/dzc1x0y1h/image/upload/v1771946105/WhatsApp_Image_2026-02-24_at_8.31.51_PM_rjsmbk.jpg",
       color: "bg-sky-500",
     },
     {
@@ -29,7 +29,7 @@ const Services = () => {
         "Experienced care for senior dogs and specific medical needs, including Arthritis, Epilepsy, and mobility support. Your pet is safe in knowledgeable hands.",
       icon: <Activity className="w-8 h-8 text-white" />,
       image:
-        "https://images.unsplash.com/photo-1535930749574-1399327ce78f?auto=format&fit=crop&q=80&w=600",
+        "https://res.cloudinary.com/dzc1x0y1h/image/upload/v1771946105/WhatsApp_Image_2026-02-24_at_8.31.51_PM_1_gpkzff.jpg",
       color: "bg-emerald-500",
     },
   ];

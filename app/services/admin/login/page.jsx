@@ -19,12 +19,6 @@ export default function Page() {
   const [updatingStatus, setUpdatingStatus] = useState(null);
 
   // Check for saved token on mount
-  useEffect(() => {
-    const savedToken = localStorage.getItem("access_token");
-    if (savedToken) {
-      setToken(savedToken);
-    }
-  }, []);
 
   // Fetch leads when token changes
   useEffect(() => {
