@@ -1,5 +1,5 @@
 import React from "react";
-import { ChevronRight, Play } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 const Hero = ({ onOpenBooking }) => {
@@ -80,10 +80,7 @@ const Hero = ({ onOpenBooking }) => {
             pets while you're away.
           </motion.p>
 
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4"
-          >
+          <motion.div variants={fadeInUp}>
             <motion.button
               onClick={onOpenBooking}
               whileHover={{ scale: 1.05 }}
@@ -92,15 +89,6 @@ const Hero = ({ onOpenBooking }) => {
             >
               Find a Sitter
               <ChevronRight className="ml-2" />
-            </motion.button>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-gray-900 border border-sky-200 px-8 py-4 rounded-2xl font-bold text-lg flex items-center justify-center shadow-lg cursor-pointer"
-            >
-              <Play className="w-5 h-5 mr-2 fill-current" />
-              Watch Video
             </motion.button>
           </motion.div>
         </motion.div>
