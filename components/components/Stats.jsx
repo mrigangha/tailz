@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 
 const Stats = () => {
   const stats = [
-    { label: "Happy Pets", value: "5000+" },
+    { label: "Happy Pets", value: "100+" },
     { label: "Verified Sitters", value: "200+" },
-    { label: "Cities", value: "15+" },
     { label: "Rating", value: "4.9/5" },
   ];
 

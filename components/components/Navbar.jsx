@@ -33,10 +33,10 @@ export default function Navbar({ scrolled, activeSection, onOpenBooking }) {
             transition={{ duration: 0.7 }}
             className="w-10 h-10 bg-gradient-to-tr from-sky-400 to-blue-600 rounded-xl shadow-lg shadow-sky-500/30 flex items-center justify-center transform rotate-3"
           >
-            <span className="text-white font-bold text-xl">PP</span>
+            <span className="text-white font-bold text-xl">JP</span>
           </motion.div>
           <span className="text-2xl font-black tracking-tighter text-gray-900">
-            Pets<span className="text-sky-600">Puller</span>
+            Julico<span className="text-sky-600">Pets</span>
           </span>
         </div>
 
