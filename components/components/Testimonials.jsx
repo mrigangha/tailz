@@ -4,13 +4,13 @@ import { motion, useMotionValue, useAnimation } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Luca & Galata's Parent",
-    role: "Dog & Cat Parent",
-    text: "A heartfelt thank you for taking care of Luca and Galata so well! You handled not only their physical but also mental and emotional needs. We literally didn't have anything to worry about - we just knew our kids were in good hands!",
+    name: "Luca's Parent",
+    role: "Dog Parent",
+    text: "A heartfelt thank you for taking care of Luca so well! You handled not only their physical but also mental and emotional needs. We literally didn't have anything to worry about - we just knew our kid was in good hands!",
   },
   {
     name: "Chumpy & Pingu's Parent",
-    role: "Pet Parent",
+    role: "Dog Parent",
     text: "A home away from home! My kids Chumpy and Pingu always enjoy their stay. The staff is absolutely professional, trustworthy and reliable. They provide good food, the place is hygienic, and they deliver exceptional customer service.",
   },
   {
@@ -20,7 +20,7 @@ const testimonials = [
   },
   {
     name: "Mochi's Parent",
-    role: "Cat Parent",
+    role: "Dog Parent",
     text: "I was nervous at first leaving Mochi behind, but the daily updates and photos put me completely at ease. Mochi was treated like royalty. We'll definitely be back!",
   },
 ];
@@ -75,7 +75,6 @@ export default function Testimonials() {
     }
   };
 
-  // Scroll the container horizontally too
   const handleWheel = (e) => {
     if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
       e.preventDefault();
@@ -160,32 +159,38 @@ export default function Testimonials() {
               whileHover={
                 !isDragging ? { y: -4, transition: { duration: 0.2 } } : {}
               }
-              className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-3xl border border-sky-100 shadow-sm"
+              className="bg-gradient-to-br from-sky-50 to-white p-8 rounded-3xl border border-sky-100 shadow-sm flex flex-col justify-between"
             >
-              {/* Big quote mark */}
-              <div className="flex justify-between items-start mb-6">
-                <Quote className="w-10 h-10 text-sky-200" />
-                <span className="text-sky-100 font-black text-6xl leading-none select-none">
-                  "
-                </span>
+              {/* Top */}
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <Quote className="w-10 h-10 text-sky-200" />
+                  <span className="text-sky-100 font-black text-6xl leading-none select-none">
+                    "
+                  </span>
+                </div>
+
+                <p className="text-gray-600 text-base leading-relaxed italic mb-8 flex-1">
+                  {t.text}
+                </p>
               </div>
 
-              <p className="text-gray-600 text-base leading-relaxed italic mb-8">
-                {t.text}
-              </p>
+              {/* Bottom */}
+              <div>
+                <div className="h-px bg-sky-100 mb-6" />
 
-              {/* Divider */}
-              <div className="h-px bg-sky-100 mb-6" />
-
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center ring-2 ring-sky-200">
-                  <User className="w-6 h-6 text-sky-400" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-bold text-gray-900 text-sm">{t.name}</h4>
-                  <p className="text-xs text-sky-500 font-bold uppercase tracking-wider mt-0.5">
-                    {t.role}
-                  </p>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 rounded-full bg-sky-100 flex items-center justify-center ring-2 ring-sky-200">
+                    <User className="w-6 h-6 text-sky-400" />
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-bold text-gray-900 text-sm">
+                      {t.name}
+                    </h4>
+                    <p className="text-xs text-sky-500 font-bold uppercase tracking-wider mt-0.5">
+                      {t.role}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -193,7 +198,7 @@ export default function Testimonials() {
         </motion.div>
       </div>
 
-      {/* Scroll hint — fades out after mount */}
+      {/* Scroll hint */}
       <motion.p
         className="text-center text-gray-300 text-xs mt-8 tracking-wide"
         initial={{ opacity: 1 }}
